@@ -5,7 +5,7 @@ on:
 
 env:
   DOTNET_VERSION: 10.0.x
-  PROJECT_PATH: ../../lab7/lab7.csproj
+  PROJECT_PATH: ../../../../lab7/lab7.csproj
 
 jobs:
   build:
