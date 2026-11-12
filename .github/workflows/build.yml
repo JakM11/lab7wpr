@@ -3,6 +3,9 @@ name: Build .NET project
 on:
   workflow_dispatch:
 
+env:
+  DOTNET_VERSION: 10.0.x
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,3 +16,7 @@ jobs:
         run: echo "Runner is ready"
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
